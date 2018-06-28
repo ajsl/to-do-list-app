@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Task from './Task'
+import Task from '../Container/Task'
 
 class Tasks extends Component {
 	componentDidMount() {
@@ -7,10 +7,21 @@ class Tasks extends Component {
 	}
 
 	render () {
+		const { tasks } = this.props
 
 		return(
 			<React.Fragment>
-				<Task />
+
+			 
+				
+				{ tasks.map(task => (
+
+					<Task key={ task.id } name={ task.task } id={task.id} />
+
+					))};
+				
+
+			
 			</React.Fragment>
 		);
 	}
@@ -18,4 +29,4 @@ class Tasks extends Component {
 	
 
 
-export default Tasks
+export default Tasks;
