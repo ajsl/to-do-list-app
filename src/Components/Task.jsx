@@ -12,7 +12,7 @@ const Task = ({onDelete, onEdit, onCheck, task }) => (
 		<div className="container">
 		 	<div className="row border border-dark m-3">
 		 		
-				<form className="col-md-1"> <input type="checkbox" onChange={onCheck} checked={task.completed} /> </form>
+				<form className="col-md-1"> <input className="d-inline-block"type="checkbox" onChange={onCheck} checked={task.completed} /> <p className="d-inline-block">completed</p></form>
 				<h4 className="col-md-4 "> {task.task} </h4>
 				<Form className="btn-warning" name="Edit" onSubmit={ onEdit } label="Task" />
 				<button  onClick={ onDelete } className="col-md-2 btn-danger "> Delete </button>

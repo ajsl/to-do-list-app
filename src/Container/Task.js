@@ -11,7 +11,7 @@ import { deleteTask, putTask, patchTask} from "../Data/api";
 // };
 
 
-const mapDispatchToProps = (dispatch, { task }) => {
+const mapDispatchToProps = (dispatch, { task, checked }) => {
 	const check = task.completed
 	const id = task.id
 
@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch, { task }) => {
 
 		onDelete: () => dispatch(deleteTask(id)), 
 		onEdit: data => dispatch(putTask(id, data)),
-		onCheck: () => dispatch(patchTask(id, check))
+		onCheck: () => dispatch(patchTask(id, checked))
 	};
 };
 
