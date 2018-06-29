@@ -9,7 +9,7 @@ export const setTasks = (tasks) => {
 export const addTask = (task) => {
 	return {
 		type: "addTask",
-		tasks: task,
+		task: task,
 	};
 };
 

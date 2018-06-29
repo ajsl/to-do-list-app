@@ -16,9 +16,9 @@ class Tasks extends Component {
 				
 				{ tasks.map(task => (
 
-					<Task key={ task.id } name={ task.task } id={task.id} />
+					<Task key={ task.id } task={ task }  />
 
-					))};
+					))}
 				
 
 			

@@ -17,7 +17,7 @@ class Form extends Component {
 	}
 
 		handleChange(e) {
-		const fields = this.state.fields;
+		
 		this.setState({value: e.target.value});
 		}
 
@@ -32,20 +32,26 @@ class Form extends Component {
 
 			this.props.onSubmit(data);
 
+			this.setState(({
+				value: "",
+			}))
+
 		}
 	
 
 
 
 	render() {
-		const {name, fields} = this.props;
+		const {name, className} = this.props;
 		return(
 		<React.Fragment>
-		<form onSubmit={this.handleSubmit} >
+		<form className="d.padding.5 row d.inline-block" onSubmit={this.handleSubmit} >
 			<input 	
 				onChange={e => this.handleChange(e)}
+				className="col-md-9"
+				value={this.state.value}
 				/>
-			<button>{name}</button> 
+			<button className={className}>{name}</button> 
 		</form>
 		</React.Fragment>
 

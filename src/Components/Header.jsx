@@ -4,12 +4,11 @@ import Form from './Forms/Form'
 
 
 
-const Header = ({children, onSubmit}) => (
+const Header = ({children, onSubmit }) => (
 	<React.Fragment>
-		<header>
-			<h1> { children } </h1>
-			{console.log(onSubmit)}
-			<Form name="Add" onSubmit={ onSubmit } label="Task" />
+		<header className="card text-center">
+			<h1 className="card-title"> { children } </h1>
+			<Form className="btn-primary " name="Add" onSubmit={ onSubmit } label="Task" />
 		</header>
 	</React.Fragment>
 )
